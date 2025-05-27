@@ -49,17 +49,17 @@ exports.addEvent = async (req, res) => {
 exports.updateEvent = async (req, res) => {
     try {
     const event = await Event.findByIdAndUpdate(
-      request.params.id,
-      request.body,
+      req.params.id,
+      req.body,
       {
         new: true,
       });
       if (!event){
-        return response.status(404).send({error: "Event not found"})
+        return res.status(404).send({error: "Event not found"})
     }
-    response.send(event);
+    res.send(event);
   } catch (error) {
-    response.status(500).send({ error: "Failed to update Event" });
+    res.status(500).send({ error: "Failed to update Event" });
   }
 };
 
