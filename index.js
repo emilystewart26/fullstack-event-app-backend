@@ -19,10 +19,10 @@ mongoose.connect(process.env.MONGODB_URL)
 .catch(err => console.error('MongoDB connection error:', err));
 
 // Routes
-const adRoutes = require('./routes/adRoutes');
+const eventRoutes = require('./routes/eventRoutes');
 const authRoutes = require('./routes/authRoutes');
 
-app.use('/ads', adRoutes);
+app.use('/events', eventRoutes);
 app.use('/auth', authRoutes);
 
 // Start the server

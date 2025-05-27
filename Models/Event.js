@@ -1,16 +1,20 @@
 const mongoose = require('mongoose');
 
-const adSchema = new mongoose.Schema({
-  title: {
+const eventSchema = new mongoose.Schema({
+  name: {
     type: String,
     required: true
   },
-  description: {
+  location: {
     type: String,
     required: true
   },
-  price: {
-    type: Number,
+  details: {
+    type: String,
+    required: true
+  },
+  when: {
+    type: Date,
     required: true
   },
   createdAt: {
@@ -24,4 +28,4 @@ const adSchema = new mongoose.Schema({
   }
 });
 
-module.exports = mongoose.model('Ad', adSchema);
+module.exports = mongoose.model('Event', eventSchema);
