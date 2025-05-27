@@ -35,7 +35,7 @@ exports.addEvent = async (req, res) => {
     name: req.body.name,
     location: req.body.location,
     details: req.body.details,
-    when: req.body.when,
+    datetime: req.body.datetime,
     userId: userInDB._id,
   });
   try {

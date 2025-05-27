@@ -13,8 +13,8 @@ const eventSchema = new mongoose.Schema({
     type: String,
     required: true
   },
-  when: {
-    type: Date,
+  datetime: {
+    type: String,
     required: true
   },
   createdAt: {
